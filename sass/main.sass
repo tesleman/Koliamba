@@ -1,0 +1,189 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+.head-owerley
+	&::before
+		content: ''
+		background-color: #9fc9eb
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		position: absolute
+		opacity: 0.75
+
+.main-head
+	background-image: url('/img/555.jpg')
+	min-height: 100vh
+	background-size: cover
+	text-outline: center
+	overflow: hidden
+
+.top-line	
+	padding-top: 30px
+	display: flex
+	margin: auto
+	
+.logo
+	display: block
+	width: 98px
+	img 
+		width: 100%
+.fa-address-book-o
+	font-size: 20px
+	color: $accent
+.main-menu
+	padding: 20px	
+	text-align: center
+	> ul
+		padding: 0
+		margin: 0
+		> li 	
+			> a 
+				padding: 10px 18px
+				color: #7e91a4
+				@extend .mt
+				&:hover
+					color: #414e5b
+			&.active
+				a 
+					color: #414e5b
+					text-decoration: underline
+		
+
+.fa-mobile
+	padding: 5px
+nav 
+	
+	ul 	
+		padding: 0
+		margin: 0
+		li 
+			list-style-type: none
+			padding: 0
+			margin: 0
+			display: inline-block	
+
+.phone-wr
+	padding: 20px
+	text-align: right
+	.phone
+		font-size: 20px
+		font-family: "RobotoCondensedBold", serif
+		white-space: nowrap
+
+.header-content
+	padding: 20% 0
+	h1 
+		font-family: "RobotoCondensed", sans-serif
+		font-weight: 500
+		line-height: 1.3
+		font-size: 50px
+	ul 	
+		margin-top: 30px	
+		margin-bottom: 20px
+		padding: 0
+		
+		li 
+			font-family: "RobotoCondensedbold", sans-serif
+			font-size: 17px
+			text-transform: uppercase
+			list-style-type: none
+			display: block
+			line-height: 1.9
+			padding: 0
+			margin: 0
+	.resp-img
+		max-width: 675px
+		width: 675px
+
+
+.button
+	display: inline-block
+	border: none
+	color: #d4d4d
+	text-decoration: none
+	background-color: #fff
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 5px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken(#fff, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #d4d4d
+	&:hover
+		background-color: lighten(#fff, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken(#fff, 5%)
+		&::after
+			opacity: .32
+.top-content-image
+	z-index: 2
+	background-size: cover
+
+.resp-img
+	max-width: 100%
+
+
+
+@import "media" // Always at the end

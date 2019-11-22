@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Motorcade';
+	src: url('../fonts/motorcade.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/motorcade.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/motorcade.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/motorcade.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/motorcade.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/motorcade.svg#motorcade') format('svg'); /* Chrome < 4, Legacy iOS */
+}
