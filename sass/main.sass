@@ -9,6 +9,11 @@
 	background-color: $accent
 	color: #fff
 
+
+
+
+
+
 .s-wide
 	padding-top: 60px
 	width: 100%
@@ -97,7 +102,9 @@ b, strong
 		
 
 .fa-mobile
-	padding: 5px
+	padding-right: 5px
+.fa-map-marker
+	padding-right: 5px	
 nav 
 	
 	ul 	
@@ -112,10 +119,14 @@ nav
 .phone-wr
 	padding: 20px
 	text-align: right
+	color: #414e5b
 	.phone
 		font-size: 20px
 		font-family: "RobotoCondensedBold", serif
 		white-space: nowrap
+	.adres
+		white-space: nowrap
+		text-align: center			
 
 .header-content
 	padding: 20% 0
@@ -186,11 +197,13 @@ ul.home-list
 		&::after
 			opacity: .32
 .top-content-image
+	width: 470px
 	z-index: 2
 	background-size: cover
 
-.resp-img
-	max-width: 100%
+	.resp-img
+		width: 470px
+	
 
 .mouse-icon
 	border: 2px solid #000
@@ -290,13 +303,16 @@ ul.home-list
 		font-size: 13px
 		color: $text
 		font-family: "OpenSansBold", serif
+		padding: 12px 35px
 		
 .button-accent
 	background-color: transparent
 	border: $accent 2px solid
 	color: $text
 	font-family: "OpenSansBold", serif
-	
+	&:after
+		background-color: $accent
+
 	&:hover
 		background-color: $accent
 
