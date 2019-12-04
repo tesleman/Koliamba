@@ -17,6 +17,11 @@
 .s-wide
 	padding-top: 60px
 	width: 100%
+	h2
+		font-family: "OpenSansRegular", sans-serif
+		text-align: center
+		line-height: 30px
+		font-weight: 200
 
 .s-darck
 	background-color: $main-color
@@ -305,7 +310,11 @@ ul.home-list
 		color: $text
 		font-family: "OpenSansBold", serif
 		padding: 12px 35px
-		
+		&:hover
+			background-color: $accent	
+		&:after
+			background-color: $accent	
+			height: 4px
 .button-accent
 	background-color: transparent
 	border: $accent 2px solid
@@ -313,10 +322,47 @@ ul.home-list
 	font-family: "OpenSansBold", serif
 	&:after
 		background-color: $accent
+		height: 4px
 	&:hover
 		background-color: $accent
 
-		
-		
+.s-direct		
+	h2 
+		padding-bottom: 100px
+	.button
+		background-color: lighten(#555555, 50%) 
+		width: 100%
+		font-size: 13px
+		color: $text
+		font-family: "OpenSansBold", serif
+		padding: 12px 35px
+		border: $accent 2px solid
+		margin-top: 20px
+		&:hover
+			background-color: $accent	
+		&:after
+			background-color: $accent	
+			height: 4px	
+.vertikal-item
+	margin-right: 30px
+	
+	text-align: center
+	cursor: pointer
+	&:hover
+		.fa
+			color: $accent
+			transition: all 1s ease
+		.button
+			background-color: $accent	
+			transition: all 1s ease
+	h4 
+		padding-top: 15px
+		font-family: "OpenSansRegular", sans-serif
+		font-size: 25px
+		font-weight: 200
+		margin-bottom: 20px
+	.fa
+		padding-top: 15px
+		font-size: 80px
 
 @import "media" // Always at the end
