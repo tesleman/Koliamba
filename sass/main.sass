@@ -294,6 +294,7 @@ ul.home-list
 	background-color: #f8f8f8
 
 .about-profile
+	padding-top: 18%
 	h1 
 		font-size: 43px
 		font-family: "OpenSansRegular", sans-serif
@@ -310,21 +311,23 @@ ul.home-list
 		color: $text
 		font-family: "OpenSansBold", serif
 		padding: 12px 35px
+		background-color: lighten(#555555, 50%) 
+		border: lighten(#555555, 50%) 1px solid
 		&:hover
 			background-color: $accent	
 		&:after
 			background-color: $accent	
 			height: 4px
-.button-accent
-	background-color: transparent
-	border: $accent 2px solid
-	color: $text
-	font-family: "OpenSansBold", serif
-	&:after
-		background-color: $accent
-		height: 4px
-	&:hover
-		background-color: $accent
+	.button-accent
+		background-color: #ffffff
+		border: $accent 1px solid
+		color: $text
+		font-family: "OpenSansBold", serif
+		&:after
+			background-color: $accent
+			height: 4px
+		&:hover
+			background-color: $accent
 
 .s-direct		
 	h2 
@@ -345,7 +348,6 @@ ul.home-list
 			height: 4px	
 .vertikal-item
 	margin-right: 30px
-	
 	text-align: center
 	cursor: pointer
 	&:hover
@@ -358,11 +360,13 @@ ul.home-list
 	h4 
 		padding-top: 15px
 		font-family: "OpenSansRegular", sans-serif
-		font-size: 25px
+		font-size: 20px
 		font-weight: 200
 		margin-bottom: 20px
 	.fa
 		padding-top: 15px
 		font-size: 80px
-
+	p 
+		font-size: 15px
+		font-family: "OpenSansRegular", sans-serif
 @import "media" // Always at the end
