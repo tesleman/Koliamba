@@ -82,4 +82,24 @@ $(".partner-slider").owlCarousel({
 });
 
 
+
+
+$(".top-line-1.sf-menu").superfish({
+	cssArrows: true,
+	delay:300,
+	speed:'slow', 
+});
+
+
+
+
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 1){
+	$('.top-box').addClass("glide");
+	}
+	else{
+	$('.top-box').removeClass("glide");
+	}
+	});
+
 });

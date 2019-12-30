@@ -93,7 +93,46 @@ b, strong
 	padding-top: 30px
 	display: flex
 	margin: auto
+
+.top-line-1
+	display: inline-block
+	position: relative
+	text-align: center
+	display: block
 	
+	.sf-menu 
+		text-align: center
+		display: inline-block
+		float: none
+		margin-bottom: 0
+		margin-top: 15px
+		
+		li 
+			border: lighten($text , 77%) 1px solid
+			display: block
+			background-color: transparent
+			a 
+				text-align: center
+
+.top-box
+	
+	transition-delay: all 0.9s ease
+.top-box.glide 
+	position: fixed
+	transition: 
+	z-index: 3
+	top: 0
+	background-image: url("/img/bgr.jpg")
+	left: 0
+	right: 0
+	ul
+		li
+			border: none
+			ul 
+				li 
+			
+					background-color: #5C8DB6
+
 .logo
 	display: block
 	width: 98px
@@ -102,23 +141,23 @@ b, strong
 .fa-address-book-o
 	font-size: 20px
 	color: $accent
-.main-menu
-	padding: 20px	
-	text-align: center
-	> ul
-		padding: 0
-		margin: 0
-		> li 	
-			> a 
-				padding: 10px 18px
-				color: #7e91a4
-				@extend .mt
-				&:hover
-					color: #414e5b
-			&.active
-				a 
-					color: #414e5b
-					text-decoration: underline
+// .sf-menu
+// 	padding: 20px	
+// 	text-align: center
+// 	> ul
+// 		padding: 0
+// 		margin: 0
+// 		> li 	
+// 			> a 
+// 				padding: 10px 18px
+// 				color: #7e91a4
+// 				@extend .mt
+// 				&:hover
+// 					color: #414e5b
+// 			&.active
+// 				a 
+// 					color: #414e5b
+// 					text-decoration: underline
 		
 
 .fa-mobile
