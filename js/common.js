@@ -45,7 +45,7 @@ $(".portfolio-item").each(function(e){
 	;
 
 });
-$(".portfolio-item").magnificPopup({
+$(".portfolio-item, a[href='#callback'] ").magnificPopup({
 
 	mainClass: 'my-mfp-zoom-in',
 	removalDelay: 300,
@@ -92,14 +92,49 @@ $(".top-line-1.sf-menu").superfish({
 
 
 
+// $(window).scroll(function() {
+// 	if ($(this).scrollTop() > 1){
+// 	$('.top-box').addClass("glide");
+// 	}
+// 	else{
+// 	$('.top-box').removeClass("glide");
+// 	}
+// 	});
+$('.callback').submit(function() { //Change
+	var th = $(this);
+	$.ajax({
+		type: "POST",
+		url: "mail.php", //Change
+		data: th.serialize()
+	}).done(function() {
+		$(".callback .succes").addClass("visible");
+		setTimeout(function() {
+			// Done Functions
+			th.trigger("reset");
+			$('.callback .succes').removeClass("visible")
+			$.magnificPopup.close();
+		}, 3000);
+	});
+	return false;
+});
+
+
+$("body").append('<div class="top"><i class="fa fa-angle-double-up">');
+
+
+
+$(".top").click(function(){
+
+	$("html, body").animate({scrollTop: 0}, "slow");
+
+});
+
 
 $(window).scroll(function() {
-	if ($(this).scrollTop() > 1){
-	$('.top-box').addClass("glide");
+	if($(this).scrollTop() > $(this).height()){
+		$(".top").addClass("active");
+	} else {
+		$(".top").removeClass("active");
 	}
-	else{
-	$('.top-box').removeClass("glide");
-	}
-	});
-
+});
 });

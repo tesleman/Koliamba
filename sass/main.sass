@@ -100,7 +100,9 @@ b, strong
 	text-align: center
 	display: block
 	
+	s
 	.sf-menu 
+		font-size: 15px
 		text-align: center
 		display: inline-block
 		float: none
@@ -110,19 +112,21 @@ b, strong
 		li 
 			border: lighten($text , 77%) 1px solid
 			display: block
-			background-color: transparent
+			background-color: #fff
 			a 
 				text-align: center
 
+						
 .top-box
 	
-	transition-delay: all 0.9s ease
+	
 .top-box.glide 
+	transition: all 1s ease
 	position: fixed
 	transition: 
 	z-index: 3
 	top: 0
-	background-image: url("/img/bgr.jpg")
+	background-image: url("../img/bgr.jpg")
 	left: 0
 	right: 0
 	ul
@@ -136,6 +140,7 @@ b, strong
 .logo
 	display: block
 	width: 98px
+	height: 98px
 	img 
 		width: 100%
 .fa-address-book-o
@@ -629,11 +634,81 @@ ul.home-list
 	padding: 10px
 	background-color: darken($main-color, 5%)
 	white-space: nowrap
+	
 	.ruuls
 		color: lighten($text, 4%)
 	.min-logo	
 		max-width: 50%
+	.phone-wr
+		color: #ffffff
 
+.popup-form
+	position: relative
+	padding: 20px 30px
+	max-width: 320px
+	margin-left: 43%
+	box-shadow: rgba(0,0,0,.4)0 0 10px
+	overflow: hidden
+	
+	h3 
+		text-align: center
+		color: #ffffff
+		
+	label, input
+		display: block	
+		width: 100%
+		color: #ffffff
+	label
+		margin-bottom: 15px	
+		sapn 
+			14px
+	input
+		border: $accent 5px solid
 
+	.button
+		margin-top: 20px
+		margin-bottom: 10px
+		padding: 10px 35px
+.succes
+	position: absolute
+	top: -100%
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	text-align: center
+	z-index: 1
+	font-family: "RobotoCondensedBold", sans-serif
+	padding: 30px
+	text-transform: uppercase
+	align-items: center
+	display: flex
+	margin: auto
+	transition: all 1s ease
+	opacity: 0
 
+	&.active
+		top: 0
+		opacity: 1
+.top
+
+	position: fixed
+	bottom: 20px
+	right: -120px
+	width: 50px
+	height: 50px
+	background-color: #fff
+	border-radius: 100%
+	cursor: pointer
+	text-align: center
+	opacity: .4
+	transition: all 1s ease
+	.fa
+		color: $text
+		font-size: 45px
+	&:hover	
+		opacity: 1
+		background-color: $accent	
+	&.active
+		right: 20px
 @import "media" // Always at the end
